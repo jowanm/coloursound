@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ColourSound" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h9M-6f-jXl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="canvasbg.png" translatesAutoresizingMaskIntoConstraints="NO" id="a4u-Ai-lLB">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="amB-3v-a9v" customClass="Canvas" customModule="ColourSound">
+                                <rect key="frame" x="0.0" y="44" width="375" height="698"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qz9-cB-vq0">
+                                <rect key="frame" x="0.0" y="742" width="375" height="36"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="borderline.png" translatesAutoresizingMaskIntoConstraints="NO" id="rjg-lv-GtL">
+                                        <rect key="frame" x="-58" y="-39" width="490" height="81"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WG3-7P-pdN">
+                                        <rect key="frame" x="17" y="20" width="20" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                        </accessibility>
+                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="arrow.uturn.left" catalog="system">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="undoAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6LC-zc-nJA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNv-lv-bko">
+                                        <rect key="frame" x="330" y="22" width="20" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                        </accessibility>
+                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="xmark.circle.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="clearCanvas:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Iig-WN-R90"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l0e-Xd-Z5I">
+                                        <rect key="frame" x="178" y="18" width="19" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                        </accessibility>
+                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="chevron.up" catalog="system">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="showSwatch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TtE-XY-7Jh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="phr-aO-xHz">
+                                        <rect key="frame" x="69" y="20" width="20" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                        </accessibility>
+                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="arrow.uturn.right" catalog="system">
+                                            <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="redoAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VFt-iP-9Df"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ea8-Yv-JVp">
+                                        <rect key="frame" x="269" y="22" width="22" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="timelapse" catalog="system">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="eraseAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9yL-dX-EQT"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="a4u-Ai-lLB" firstAttribute="top" secondItem="h9M-6f-jXl" secondAttribute="top" id="0Lk-4U-Mcw"/>
+                            <constraint firstItem="a4u-Ai-lLB" firstAttribute="bottom" secondItem="L7c-pV-rOd" secondAttribute="bottom" id="7A0-Ta-o3y"/>
+                            <constraint firstItem="a4u-Ai-lLB" firstAttribute="leading" secondItem="L7c-pV-rOd" secondAttribute="leading" id="9eY-3b-N4I"/>
+                            <constraint firstAttribute="bottom" secondItem="amB-3v-a9v" secondAttribute="bottom" constant="70" id="FLg-5V-qQp"/>
+                            <constraint firstItem="amB-3v-a9v" firstAttribute="leading" secondItem="a4u-Ai-lLB" secondAttribute="leading" id="FVW-Df-paE"/>
+                            <constraint firstItem="qz9-cB-vq0" firstAttribute="trailing" secondItem="a4u-Ai-lLB" secondAttribute="trailing" id="GyM-R1-KSl"/>
+                            <constraint firstItem="qz9-cB-vq0" firstAttribute="bottom" secondItem="L7c-pV-rOd" secondAttribute="bottom" id="apf-6b-FTG"/>
+                            <constraint firstItem="a4u-Ai-lLB" firstAttribute="trailing" secondItem="L7c-pV-rOd" secondAttribute="trailing" id="hyr-xF-m01"/>
+                            <constraint firstItem="qz9-cB-vq0" firstAttribute="top" secondItem="amB-3v-a9v" secondAttribute="bottom" id="jcc-FN-G7J"/>
+                            <constraint firstItem="qz9-cB-vq0" firstAttribute="leading" secondItem="amB-3v-a9v" secondAttribute="leading" id="sXa-eD-QiB"/>
+                            <constraint firstItem="amB-3v-a9v" firstAttribute="top" secondItem="L7c-pV-rOd" secondAttribute="top" id="tVB-3e-HP5"/>
+                            <constraint firstItem="qz9-cB-vq0" firstAttribute="trailing" secondItem="amB-3v-a9v" secondAttribute="trailing" id="wi5-ke-vKw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="L7c-pV-rOd"/>
+                    </view>
+                    <connections>
+                        <outlet property="canvas" destination="amB-3v-a9v" id="Odb-G7-5fP"/>
+                        <outlet property="clearButton" destination="DNv-lv-bko" id="E7r-Vt-N7H"/>
+                        <outlet property="eraseButton" destination="Ea8-Yv-JVp" id="UJU-8U-CBQ"/>
+                        <outlet property="redoButton" destination="phr-aO-xHz" id="iFW-sl-KOF"/>
+                        <outlet property="swatchButton" destination="l0e-Xd-Z5I" id="FAu-gA-EYj"/>
+                        <outlet property="undoButton" destination="WG3-7P-pdN" id="2Kn-kd-qxG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="canvasbg.png" id="JdR-oZ-ltE">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="267"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="68.7192118226601"/>
+        </scene>
+        <!--Swatch View Controller-->
+        <scene sceneID="ys5-gJ-h2K">
+            <objects>
+                <viewController storyboardIdentifier="swatch_vc" modalPresentationStyle="fullScreen" id="dLk-ls-cPf" customClass="SwatchViewController" customModule="ColourSound" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l14-Vq-Whh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="canvasbg.png" translatesAutoresizingMaskIntoConstraints="NO" id="fcy-cP-c1n">
+                                <rect key="frame" x="0.0" y="20" width="375" height="758"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CfB-5J-cgC">
+                                <rect key="frame" x="40" y="201" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="design.png"/>
+                                <connections>
+                                    <action selector="crimsonTouched:" destination="dLk-ls-cPf" eventType="touchUpInside" id="JaD-6Y-P5j"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kxb-X8-y0U">
+                                <rect key="frame" x="118" y="112" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="hughes.png"/>
+                                <connections>
+                                    <action selector="hughesTouched:" destination="dLk-ls-cPf" eventType="touchUpInside" id="xoP-hE-I1L"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CbU-lF-9bd">
+                                <rect key="frame" x="262" y="201" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="tangerine.png"/>
+                                <connections>
+                                    <action selector="tangerineTouched:" destination="dLk-ls-cPf" eventType="touchUpInside" id="RNC-sy-zx9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OhF-9f-J7W">
+                                <rect key="frame" x="262" y="112" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="smoke.png"/>
+                                <connections>
+                                    <action selector="smokeTouched:" destination="dLk-ls-cPf" eventType="touchUpInside" id="nnc-YI-NIy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q37-Sx-itE">
+                                <rect key="frame" x="262" y="284" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="lemon.png"/>
+                                <connections>
+                                    <action selector="lemonTouched:" destination="dLk-ls-cPf" eventType="touchUpInside" id="Soy-3j-b0X"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p2Q-re-6aB">
+                                <rect key="frame" x="266" y="360" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="emerald.png"/>
+                                <connections>
+                                    <action selector="emeraldTouched:" destination="dLk-ls-cPf" eventType="touchUpInside" id="TBZ-i3-2he"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ig8-hj-8ui">
+                                <rect key="frame" x="266" y="439" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="azure.png"/>
+                                <connections>
+                                    <action selector="azureTouched:" destination="dLk-ls-cPf" eventType="touchUpInside" id="nhi-Yl-M7t"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJ8-i2-m1a">
+                                <rect key="frame" x="271" y="519" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="violet.png"/>
+                                <connections>
+                                    <action selector="violetTouched:" destination="dLk-ls-cPf" eventType="touchUpInside" id="U5l-4u-sGJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Azs-Be-5Ev">
+                                <rect key="frame" x="190" y="112" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="slate.png"/>
+                                <connections>
+                                    <action selector="slateTouched:" destination="dLk-ls-cPf" eventType="touchUpInside" id="uzN-jn-TFf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uoF-30-VCN">
+                                <rect key="frame" x="190" y="201" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="mahogany.png"/>
+                                <connections>
+                                    <action selector="mahoganyTouched:" destination="dLk-ls-cPf" eventType="touchUpInside" id="Tij-Yp-SAU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ph6-iy-H73">
+                                <rect key="frame" x="194" y="284" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="peach.png"/>
+                                <connections>
+                                    <action selector="peachTouched:" destination="dLk-ls-cPf" eventType="touchUpInside" id="nG2-Dp-2DD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgI-Ca-zze">
+                                <rect key="frame" x="194" y="360" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="kelly.png"/>
+                                <connections>
+                                    <action selector="kellyTouched:" destination="dLk-ls-cPf" eventType="touchUpInside" id="p5k-ut-XQf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gy-Yu-guW">
+                                <rect key="frame" x="190" y="439" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="egyptian.png"/>
+                                <connections>
+                                    <action selector="egyptianTouched:" destination="dLk-ls-cPf" eventType="touchUpInside" id="eUv-sy-lkT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0EM-ae-OJF">
+                                <rect key="frame" x="194" y="519" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="grimace.png"/>
+                                <connections>
+                                    <action selector="grimaceTouched:" destination="dLk-ls-cPf" eventType="touchUpInside" id="ScK-98-SXh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rRs-J6-8QJ">
+                                <rect key="frame" x="118" y="201" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="carmine.png"/>
+                                <connections>
+                                    <action selector="carmineTouched:" destination="dLk-ls-cPf" eventType="touchUpInside" id="FWe-Zo-2h9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iXc-Jk-XP8">
+                                <rect key="frame" x="118" y="284" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="dijon.png"/>
+                                <connections>
+                                    <action selector="dijonTouched:" destination="dLk-ls-cPf" eventType="touchUpInside" id="pnz-rO-gKD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RrM-Ib-hwR">
+                                <rect key="frame" x="118" y="360" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="lime.png"/>
+                                <connections>
+                                    <action selector="limeTouched:" destination="dLk-ls-cPf" eventType="touchUpInside" id="DKH-75-Yoy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zjb-0f-stf">
+                                <rect key="frame" x="118" y="439" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="teal.png"/>
+                                <connections>
+                                    <action selector="tealTouched:" destination="dLk-ls-cPf" eventType="touchUpInside" id="0GJ-16-teZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qcf-rs-2tf">
+                                <rect key="frame" x="40" y="519" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="flamingo.png"/>
+                                <connections>
+                                    <action selector="flamingoTouched:" destination="dLk-ls-cPf" eventType="touchUpInside" id="xPR-gJ-qad"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ff5-eb-Haq">
+                                <rect key="frame" x="40" y="439" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="royal.png"/>
+                                <connections>
+                                    <action selector="royalTouched:" destination="dLk-ls-cPf" eventType="touchUpInside" id="cPo-gW-1oB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="43b-Ov-gPH">
+                                <rect key="frame" x="40" y="360" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="forest.png"/>
+                                <connections>
+                                    <action selector="forestTouched:" destination="dLk-ls-cPf" eventType="touchUpInside" id="BxE-LB-QyF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMV-I7-JMl">
+                                <rect key="frame" x="40" y="284" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="amber.png"/>
+                                <connections>
+                                    <action selector="amberTouched:" destination="dLk-ls-cPf" eventType="touchUpInside" id="RPt-9q-4Uh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ff-qT-Y34">
+                                <rect key="frame" x="40" y="112" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="charcoal.png"/>
+                                <connections>
+                                    <action selector="charcoalTouched:" destination="dLk-ls-cPf" eventType="touchUpInside" id="IW1-FD-fXQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="22X-5T-Gel">
+                                <rect key="frame" x="161" y="28" width="52" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="chevron.down" catalog="system"/>
+                                <connections>
+                                    <action selector="returnCanvas:" destination="dLk-ls-cPf" eventType="touchUpInside" id="kuT-Z2-xNp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jeO-ZJ-njn">
+                                <rect key="frame" x="118" y="519" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="cerise.png"/>
+                                <connections>
+                                    <action selector="ceriseTouched:" destination="dLk-ls-cPf" eventType="touchUpInside" id="zts-8L-cYE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fcy-cP-c1n" firstAttribute="top" secondItem="l14-Vq-Whh" secondAttribute="topMargin" constant="-24" id="53m-s0-uYF"/>
+                            <constraint firstItem="fcy-cP-c1n" firstAttribute="leading" secondItem="l14-Vq-Whh" secondAttribute="leading" id="afK-jY-hjB"/>
+                            <constraint firstAttribute="trailing" secondItem="fcy-cP-c1n" secondAttribute="trailing" id="fp5-fI-JwB"/>
+                            <constraint firstItem="fcy-cP-c1n" firstAttribute="bottom" secondItem="Xbn-sw-8wg" secondAttribute="bottom" id="tiS-33-YGh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Xbn-sw-8wg"/>
+                    </view>
+                    <connections>
+                        <outlet property="amberButton" destination="TMV-I7-JMl" id="EI0-xB-cMr"/>
+                        <outlet property="azureButton" destination="Ig8-hj-8ui" id="Jt7-9A-oVV"/>
+                        <outlet property="carmineButton" destination="rRs-J6-8QJ" id="fak-YB-Xdf"/>
+                        <outlet property="ceriseButton" destination="jeO-ZJ-njn" id="c4p-ri-Gzj"/>
+                        <outlet property="charcoalButton" destination="3ff-qT-Y34" id="OaS-DH-7xB"/>
+                        <outlet property="closeButton" destination="22X-5T-Gel" id="b2M-ul-qcK"/>
+                        <outlet property="crimsonButton" destination="CfB-5J-cgC" id="uD9-qa-c9O"/>
+                        <outlet property="dijonButton" destination="iXc-Jk-XP8" id="d1d-4M-HrA"/>
+                        <outlet property="egyptianButton" destination="3gy-Yu-guW" id="g7L-Ys-RTp"/>
+                        <outlet property="emeraldButton" destination="p2Q-re-6aB" id="66p-TK-Ha8"/>
+                        <outlet property="flamingoButton" destination="Qcf-rs-2tf" id="QAO-xG-0w3"/>
+                        <outlet property="forestButton" destination="43b-Ov-gPH" id="CUh-Qb-ww0"/>
+                        <outlet property="grimaceButton" destination="0EM-ae-OJF" id="tfc-AM-bhf"/>
+                        <outlet property="hughesButton" destination="Kxb-X8-y0U" id="4FO-5P-EQ8"/>
+                        <outlet property="kellyButton" destination="sgI-Ca-zze" id="Wjb-N0-Kg6"/>
+                        <outlet property="lemonButton" destination="Q37-Sx-itE" id="cdR-qg-sFn"/>
+                        <outlet property="limeButton" destination="RrM-Ib-hwR" id="a0F-AT-g26"/>
+                        <outlet property="mahoganyButton" destination="uoF-30-VCN" id="BED-Wd-Vnh"/>
+                        <outlet property="peachButton" destination="ph6-iy-H73" id="rsD-Za-vsO"/>
+                        <outlet property="royalButton" destination="Ff5-eb-Haq" id="QxH-wV-d5L"/>
+                        <outlet property="slateButton" destination="Azs-Be-5Ev" id="i6m-BQ-p0S"/>
+                        <outlet property="smokeButton" destination="OhF-9f-J7W" id="MRR-oj-4rw"/>
+                        <outlet property="tangerineButton" destination="CbU-lF-9bd" id="Aa0-6U-qaf"/>
+                        <outlet property="tealButton" destination="Zjb-0f-stf" id="OhX-4e-kss"/>
+                        <outlet property="violetButton" destination="aJ8-i2-m1a" id="pGD-7U-Ct0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wKR-86-l0f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="888.79999999999995" y="68.7192118226601"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+    <resources>
+        <image name="amber.png" width="100" height="100"/>
+        <image name="arrow.uturn.left" catalog="system" width="128" height="112"/>
+        <image name="arrow.uturn.right" catalog="system" width="128" height="112"/>
+        <image name="azure.png" width="100" height="100"/>
+        <image name="borderline.png" width="1000" height="200"/>
+        <image name="canvasbg.png" width="469.5" height="312.75"/>
+        <image name="carmine.png" width="100" height="100"/>
+        <image name="cerise.png" width="100" height="100"/>
+        <image name="charcoal.png" width="100" height="100"/>
+        <image name="chevron.down" catalog="system" width="128" height="72"/>
+        <image name="chevron.up" catalog="system" width="128" height="72"/>
+        <image name="design.png" width="100" height="100"/>
+        <image name="dijon.png" width="100" height="100"/>
+        <image name="egyptian.png" width="100" height="100"/>
+        <image name="emerald.png" width="100" height="100"/>
+        <image name="flamingo.png" width="100" height="100"/>
+        <image name="forest.png" width="100" height="100"/>
+        <image name="grimace.png" width="100" height="100"/>
+        <image name="hughes.png" width="100" height="100"/>
+        <image name="kelly.png" width="100" height="100"/>
+        <image name="lemon.png" width="100" height="100"/>
+        <image name="lime.png" width="100" height="100"/>
+        <image name="mahogany.png" width="100" height="100"/>
+        <image name="peach.png" width="100" height="100"/>
+        <image name="royal.png" width="100" height="100"/>
+        <image name="slate.png" width="100" height="100"/>
+        <image name="smoke.png" width="100" height="100"/>
+        <image name="tangerine.png" width="100" height="100"/>
+        <image name="teal.png" width="100" height="100"/>
+        <image name="timelapse" catalog="system" width="128" height="122"/>
+        <image name="violet.png" width="100" height="100"/>
+        <image name="xmark.circle.fill" catalog="system" width="128" height="121"/>
+    </resources>
+</document>
